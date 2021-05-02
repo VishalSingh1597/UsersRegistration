@@ -14,7 +14,7 @@ namespace UserRegistration
 
             Console.WriteLine("-------Welcome To User Registration--------");
             Console.WriteLine();
-            string pattern = "^[A-Za-z0-9]{8,}$"; //pattern for password minimum 8 char.
+            string pattern = "^[A-Z]{1}[a-z]{7,}$"; //pattern for password minimum 8 char.
 
             Program p = new Program(); // create object
             p.ValidPass(pattern);
@@ -46,7 +46,7 @@ namespace UserRegistration
                 }
                 else
                 {
-                    Console.WriteLine("Enter minimum eight character");
+                    Console.WriteLine("Enter minimum eight character and use atlest one Uppercase");
                 }
 
             }
