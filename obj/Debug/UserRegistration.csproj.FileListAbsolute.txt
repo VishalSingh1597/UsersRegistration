@@ -1,0 +1,7 @@
+E:\UserRegistration\UserRegistration\bin\Debug\UserRegistration.exe.config
+E:\UserRegistration\UserRegistration\bin\Debug\UserRegistration.exe
+E:\UserRegistration\UserRegistration\bin\Debug\UserRegistration.pdb
+E:\UserRegistration\UserRegistration\obj\Debug\UserRegistration.csprojAssemblyReference.cache
+E:\UserRegistration\UserRegistration\obj\Debug\UserRegistration.csproj.CoreCompileInputs.cache
+E:\UserRegistration\UserRegistration\obj\Debug\UserRegistration.exe
+E:\UserRegistration\UserRegistration\obj\Debug\UserRegistration.pdb
