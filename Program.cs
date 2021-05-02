@@ -14,37 +14,43 @@ namespace UserRegistration
 
             Console.WriteLine("-------Welcome To User Registration--------");
             Console.WriteLine();
-            string Name = "^[A-Z]{1}[A-Za-z]{2,}$"; //pattern using for string and string has minimum 3 char.
-            string[] Namearr = { "Vishal", "Himanshu", "Omi", "Aa", "ekta" };  //Array of name
+            string pattern = "^[A-Za-z0-9]{8,}$"; //pattern for password minimum 8 char.
 
             Program p = new Program(); // create object
-            p.ValidName(Namearr, Name);
+            p.ValidPass(pattern);
             Console.WriteLine();
             Console.Read();
         }
 
-        public void ValidName(string[] arr, string Name) //method to validate string
+        public void ValidPass(string pattern) //method to validate string
         {
-            Console.WriteLine("Validation Of The Name");
-            Regex regex = new Regex(Name);
-            IterateLoop(arr, regex);  //calling method
+
+            Console.WriteLine("Validation Of The Password");
+            Regex regex = new Regex(pattern);
+            IterateLoop(regex);  //calling method
         }
 
-        public void IterateLoop(string[] arr, Regex regex)
+        public void IterateLoop(Regex regex)
         {
-            for (int i = 0; i < arr.Length; i++)    //use for loop 
-
+            int i = 0; //initialize i value
+            while (i != 1)
             {
-                bool result = regex.IsMatch(arr[i]);
-                if (result == true)  //check result is true or not using if and hence using bool
+                Console.WriteLine("Enter Password");
+                string Password = Console.ReadLine();
+                bool result = regex.IsMatch(Password);  //call the IsMatch metod to determine whether a match is present
+
+                if (result == true)  ////check result is true or not using if and hence using bool
                 {
-                    Console.WriteLine(arr[i] + "---->" + "Valid");
+                    Console.WriteLine("Valid password");
+                    i = 1;
                 }
                 else
                 {
-                    Console.WriteLine(arr[i] + "--->" + "Invalid Name");
+                    Console.WriteLine("Enter minimum eight character");
                 }
-            } //end loop
+
+            }
         }
+
     }
 }
